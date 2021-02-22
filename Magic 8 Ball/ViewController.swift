@@ -3,6 +3,7 @@
 //  Magic 8 Ball
 //
 //  Created by Angela Yu on 14/06/2019.
+//  Modified by Matthew Valladares 02/07/19
 //  Copyright © 2019 The App Brewery. All rights reserved.
 //
 
@@ -12,7 +13,12 @@ class ViewController: UIViewController {
     
     let ballArray = [#imageLiteral(resourceName: "ball1.png"),#imageLiteral(resourceName: "ball2.png"),#imageLiteral(resourceName: "ball3.png"),#imageLiteral(resourceName: "ball4.png"),#imageLiteral(resourceName: "ball5.png")]
 
-
+    @IBOutlet weak var magicBallImage: UIImageView!
+    
+    @IBAction func shakeButton(_ sender: UIButton) {
+        magicBallImage.image = ballArray.randomElement()
+    }
+    
 
 }
 
